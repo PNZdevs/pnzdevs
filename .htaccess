@@ -8,9 +8,9 @@
 Options All -Indexes
 
 # Custom error page for error 403, 404 and 500
-ErrorDocument 404 /errorsPages/error.html
-ErrorDocument 403 /errorsPages/error.html
-ErrorDocument 500 /errorsPages/error.html
+ErrorDocument 404 ../errorsPages/error.html
+ErrorDocument 403 ../errorsPages/error.html
+ErrorDocument 500 ../errorsPages/error.html
 
 # php -- BEGIN cPanel-generated handler, do not edit
 # Set the “ea-php70” package as the default “PHP” programming language.
