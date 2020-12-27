@@ -1,1 +1,5 @@
-canary-enjoy-backend
+app
+.user.ini
+404.shtml
+500.shtml
+php.ini
