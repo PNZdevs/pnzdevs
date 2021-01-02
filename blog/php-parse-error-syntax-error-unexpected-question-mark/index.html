@@ -6,7 +6,7 @@
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/custom-styles.css">
-    <title>Hello World</title>
+    <title>PHP Parse error - syntax error, unexpected &#39;?&#39;</title>
     
 <meta property="og:title" content="PNZ Devs" />
 <meta property="og:url" content="https://pnzdevs.online/" />
@@ -64,14 +64,29 @@
 
     <div class="content leading-relaxed">
       <section class="blog-post">
-  <time value="" class="text-gray-600">December 15, 2020</time>  - <h5 class="inline">Mattia Penna</h5>
-  <h1 class="heading">Hello World</h1>
+  <time value="" class="text-gray-600">January 2, 2021</time>  - <h5 class="inline">Mattia Penna</h5>
+  <h1 class="heading">PHP Parse error - syntax error, unexpected &#39;?&#39;</h1>
   <div class="mb-4 text-lg font-semibold">
-    <h2>Hello world! This is our first <code>post</code>. There's so much to do, so much to code!</h2>
-<p>More exiting blog posts comign soon!!!</p>
+    <h2>PHP doesn't recognize question marks</h2>
+<p>Ever seen this error on your console while developing on your <em>Laravel</em> project? On your <em>wordpress</em> site? Or maybe on your <em>xampp?</em></p>
   </div>
   <div>
-    <p>Someday you will get where you want to be. Someday soon, someday late.</p>
+    <p>If you are reading this, odds are that you are getting this error in your <code>vendor</code> folder.</p>
+<p>Well don't worry, it's no big deal or any kind of complicated error. Chances are that <strong>your php in not up to date!</strong></p>
+<h2>What are the ? before variables type in PHP</h2>
+<p>Those '?' that gives you error ara a syntax called <strong>Nullable Types</strong> in php and have been implemented in PHP 7.1.</p>
+<p><em>Nullable type simply means when you prepends ? to the type name while declaring types in the method parameters or for return values, it will be marked as nullable. This signifies that as well as the specified type, NULL can be passed as an argument, or returned as a value, respectively.</em> More info <a href="https://www.php.net/manual/en/migration71.new-features.php">on PHP oficial page</a></p>
+<p>So, if you type hint parameter with ? like below:
+<br><br></p>
+<pre><code class="language-php">function printMe(?string $name)
+{
+  var_dump($name);
+}
+<p>printMe('FooBar'); // string(10) &quot;FooBar&quot;
+printMe(null); // NULL
+</code></pre></p>
+<p>As you can see, the method will accept both string and null as a parameter without any error and process them likewise. But if you don’t pass any arguments it then it will result into a fatal error.</p>
+<p>So there you have it, if you want to use those dependencies <strong>you have to update your PHP to at least version 7.1!</strong></p>
   </div>
   <div class="mt-12 pt-4 text-gray-600 text-sm border-t border-gray-300">
     <p>
